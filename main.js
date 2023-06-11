@@ -17,7 +17,7 @@ const presentDay = presentTime.getDate();
 // get the present month
 const presentMonth = presentTime.getMonth();
 // get the present year.
-const presentYear = presentTime.getYear();
+const presentYear = presentTime.getFullYear();
 
 // write event listener that runs a function when input chagnes
 
@@ -27,14 +27,21 @@ function getDateDifferenceage(){
     const yearValue = Number(inputYear.value);
 
     // difference between present year and birth year.
-    const diffYear =  yearValue - presentYear;
-    const diffMonth =  monthValue - presentMonth;
-    const diffDay =  dayValue - presentDay;
+    const diffYear =   presentYear - yearValue
+    const diffMonth =   presentMonth - monthValue
+    const diffDay =   presentDay - dayValue
 
+    console.log(diffYear, diffMonth, diffDay)
+    // adjust age if months is negative
+    if(diffMonth < 0 || (diffMonth ===0 && diffDay < 0)){
+        diffYear--;
+        diffMonth +=12;
+    }
 
-
-    // console.log(`day:${dayValue}, month:${monthValue}, Year:${yearValue}`)
-    // console.log(dayValue, monthValue, yearValue)
+    if()
+    spanYear.innerHTML = diffYear
+    spanMonth.innerHTML = diffMonth
+    spanDay.innerHTML = diffDay
     console.log(typeof(yearValue));
 };
 
