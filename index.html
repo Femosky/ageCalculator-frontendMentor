@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="./main.js" defer></script>
 </head>
-  <body>
-    <div class="main">
-      <div class="container">
-        <div class="top">
-          <form>
-            <div>
 
-              <label>DAY</label>
-              <input class="input" id="input-day" type="number" placeholder="24"/>
-            </div>
-            <div>
-              <label>MONTH</label>
-              <input class="input" id="input-month" type="number" placeholder="09"/>
-            </div>
-            <div>
-              <label>YEAR</label>
-              <input class="input" id="input-year" type="number" placeholder="1984"/>
-            </div>
-          </form>
-          <div class="div-img">
-            <img src="./assets/images/icon-arrow.svg" alt="">
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="top">
+        <form>
+          <div>
+
+            <label>DAY</label>
+            <input class="input" id="input-day" type="number" min="1" max="31" placeholder="24" />
           </div>
-        </div>
-        <div class="bottom">
-          <h1><span id="span-year">38</span> years</h1>
-          <h1><span id="span-month">2</span> months</h1>
-          <h1><span id="span-day">26</span> days</h1>
+          <div>
+            <label>MONTH</label>
+            <input class="input" id="input-month" type="number" min="1" max="12" placeholder="09" />
+          </div>
+          <div>
+            <label>YEAR</label>
+            <input class="input" id="input-year" type="number" min="1903" placeholder="1984" />
+          </div>
+        </form>
+        <div class="div-img">
+          <img src="./assets/images/icon-arrow.svg" alt="">
         </div>
       </div>
+      <div class="bottom">
+        <h1><span id="span-year">38</span> years</h1>
+        <h1><span id="span-month">2</span> months</h1>
+        <h1><span id="span-day">26</span> days</h1>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
